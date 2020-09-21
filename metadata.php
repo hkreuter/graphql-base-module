@@ -30,7 +30,9 @@ $aModule = [
     'author'      => 'OXID eSales',
     'url'         => 'www.oxid-esales.com',
     'email'       => 'info@oxid-esales.com',
-    'extend'      => [
+    'extend' => [
+        \OxidEsales\Eshop\Core\Config::class  => \OxidEsales\GraphQL\Base\Framework\Config::class,
+        \OxidEsales\Eshop\Core\Session::class => \OxidEsales\GraphQL\Base\Framework\Session::class,
     ],
     'controllers' => [
         // Widget Controller
