@@ -120,11 +120,6 @@
                 Currency
             </a>
         </li>
-        <li  title="Language">
-            <a href="language.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                Language
-            </a>
-        </li>
         <li  title="Link">
             <a href="link.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 Link
@@ -280,11 +275,6 @@
                 CategoryIDFilterInput
             </a>
         </li>
-        <li  title="CategorySorting">
-            <a href="categorysorting.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                CategorySorting
-            </a>
-        </li>
         <li  title="ContentFilterList">
             <a href="contentfilterlist.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ContentFilterList
@@ -305,11 +295,6 @@
                 ManufacturerFilterList
             </a>
         </li>
-        <li  title="ManufacturerSorting">
-            <a href="manufacturersorting.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                ManufacturerSorting
-            </a>
-        </li>
         <li  title="PaginationFilterInput">
             <a href="paginationfilterinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 PaginationFilterInput
@@ -320,11 +305,6 @@
                 ProductFilterList
             </a>
         </li>
-        <li  title="ProductSorting">
-            <a href="productsorting.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                ProductSorting
-            </a>
-        </li>
         <li  title="StringFilterInput">
             <a href="stringfilterinput.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 StringFilterInput
@@ -333,11 +313,6 @@
         <li  title="VendorFilterList">
             <a href="vendorfilterlist.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 VendorFilterList
-            </a>
-        </li>
-        <li  title="VendorSorting">
-            <a href="vendorsorting.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                VendorSorting
             </a>
         </li>
     </ul>
@@ -388,7 +363,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">Manufacturer</span> {</li><li></li><li><span class="tab"><span class="comment line">#   </span></span></li><li><span class="tab"><span class="meta">seo</span>: <a class="support type" href="seo.doc.html">Seo</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   </span></span></li><li><span class="tab"><span class="comment line"># </span></span></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>pagination</strong>: [<strong>Not documented</strong>]</span></span></li><li><span class="tab"><span class="comment line">#   <strong>sort</strong>: [<strong>Not documented</strong>]</span></span></li><li><span class="tab"><span class="meta">products</span>(<span class="meta">pagination</span>: <a class="support type" href="paginationfilterinput.doc.html">PaginationFilterInput</a>, <span class="meta">sort</span>: <a class="support type" href="productsorting.doc.html">ProductSorting</a>): [<a class="support type" href="product.doc.html">Product</a>!]! </span></li><li></li><li><span class="tab"><span class="comment line">#   </span></span></li><li><span class="tab"><span class="meta">id</span>: <a class="support type" href="id.doc.html">ID</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   </span></span></li><li><span class="tab"><span class="meta">active</span>: <a class="support type" href="boolean.doc.html">Boolean</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   </span></span></li><li><span class="tab"><span class="meta">icon</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   </span></span></li><li><span class="tab"><span class="meta">title</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   </span></span></li><li><span class="tab"><span class="meta">shortdesc</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   </span></span></li><li><span class="tab"><span class="meta">timestamp</span>: <a class="support type" href="datetime.doc.html">DateTime</a> </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">Manufacturer</span> {</li><li></li><li><span class="tab"><span class="comment line">#   </span></span></li><li><span class="tab"><span class="meta">seo</span>: <a class="support type" href="seo.doc.html">Seo</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   </span></span></li><li><span class="tab"><span class="comment line"># </span></span></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>pagination</strong>: [<strong>Not documented</strong>]</span></span></li><li><span class="tab"><span class="meta">products</span>(<span class="meta">pagination</span>: <a class="support type" href="paginationfilterinput.doc.html">PaginationFilterInput</a>): [<a class="support type" href="product.doc.html">Product</a>!]! </span></li><li></li><li><span class="tab"><span class="comment line">#   </span></span></li><li><span class="tab"><span class="meta">id</span>: <a class="support type" href="id.doc.html">ID</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   </span></span></li><li><span class="tab"><span class="meta">active</span>: <a class="support type" href="boolean.doc.html">Boolean</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   </span></span></li><li><span class="tab"><span class="meta">icon</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   </span></span></li><li><span class="tab"><span class="meta">title</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   </span></span></li><li><span class="tab"><span class="meta">shortdesc</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   </span></span></li><li><span class="tab"><span class="meta">timestamp</span>: <a class="support type" href="datetime.doc.html">DateTime</a>! </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
