@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
-    <title>ID</title>
+    <title>Price</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
 </head>
 <body class="slds-scrollable--y">
@@ -55,7 +55,7 @@
                 Float
             </a>
         </li>
-        <li class="slds-is-active" title="ID">
+        <li  title="ID">
             <a href="id.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ID
             </a>
@@ -135,7 +135,7 @@
                 Manufacturer
             </a>
         </li>
-        <li  title="Price">
+        <li class="slds-is-active" title="Price">
             <a href="price.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 Price
             </a>
@@ -375,14 +375,9 @@
         </div>
     </div>
     <div class="container">
-        <p class="slds-text-title--caps slds-text-color--weak">SCALAR</p>
-        <h1 class="slds-text-heading--large">ID</h1>
-        <div class="slds-text-body--regular"><p>The <code>ID</code> scalar type represents a unique identifier, often used to
-refetch an object or as key for a cache. The ID type appears in a JSON
-response as a String; however, it is not intended to be human-readable.
-When expected as an input type, any string (such as <code>&quot;4&quot;</code>) or integer
-(such as <code>4</code>) input value will be accepted as an ID.</p>
-</div>
+        <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
+        <h1 class="slds-text-heading--large">Price</h1>
+        <div class="slds-text-body--regular"></div>
     </div>
 </section>
 <section>
@@ -393,7 +388,7 @@ When expected as an input type, any string (such as <code>&quot;4&quot;</code>) 
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">scalar</span> <span class="identifier">ID</span></li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">Price</span> {</li><li></li><li><span class="tab"><span class="comment line">#   </span></span></li><li><span class="tab"><span class="meta">currency</span>: <a class="support type" href="currency.doc.html">Currency</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   </span></span></li><li><span class="tab"><span class="meta">price</span>: <a class="support type" href="float.doc.html">Float</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   </span></span></li><li><span class="tab"><span class="meta">vat</span>: <a class="support type" href="float.doc.html">Float</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   </span></span></li><li><span class="tab"><span class="meta">vatValue</span>: <a class="support type" href="float.doc.html">Float</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   </span></span></li><li><span class="tab"><span class="meta">nettoPriceMode</span>: <a class="support type" href="boolean.doc.html">Boolean</a>! </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -404,7 +399,7 @@ When expected as an input type, any string (such as <code>&quot;4&quot;</code>) 
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="action.doc.html" title="Action - ">Action<em>null</em></a><li><li><a href="banner.doc.html" title="Banner - ">Banner<em>null</em></a><li><li><a href="category.doc.html" title="Category - ">Category<em>null</em></a><li><li><a href="categoryidfilterinput.doc.html" title="CategoryIDFilterInput - ">CategoryIDFilterInput<em>null</em></a><li><li><a href="content.doc.html" title="Content - ">Content<em>null</em></a><li><li><a href="idfilterinput.doc.html" title="IDFilterInput - ">IDFilterInput<em>null</em></a><li><li><a href="language.doc.html" title="Language - ">Language<em>null</em></a><li><li><a href="link.doc.html" title="Link - ">Link<em>null</em></a><li><li><a href="manufacturer.doc.html" title="Manufacturer - ">Manufacturer<em>null</em></a><li><li><a href="product.doc.html" title="Product - ">Product<em>null</em></a><li><li><a href="promotion.doc.html" title="Promotion - ">Promotion<em>null</em></a><li><li><a href="review.doc.html" title="Review - ">Review<em>null</em></a><li><li><a href="vendor.doc.html" title="Vendor - ">Vendor<em>null</em></a><li></ul>
+        <ul class="require-by"><li><a href="product.doc.html" title="Product - ">Product<em>null</em></a><li><li><a href="productunit.doc.html" title="ProductUnit - ">ProductUnit<em>null</em></a><li></ul>
     </div>
 </section>
 <footer>
