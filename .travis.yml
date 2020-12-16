@@ -6,9 +6,9 @@ notifications:
     email: false
 
 php:
-    - "7.1"
-    - "7.2"
-    - "7.3"
+#    - "7.1"
+#    - "7.2"
+#    - "7.3"
     - "7.4"
 
 cache:
@@ -21,7 +21,7 @@ matrix:
 env:
   matrix:
     - DEPENDENCIES=""
-    - DEPENDENCIES=" --prefer-lowest"
+#    - DEPENDENCIES=" --prefer-lowest"
   global:
     - DEFAULT_COMPOSER_FLAGS="--no-interaction --no-ansi --no-progress --no-suggest --prefer-dist"
 
@@ -32,23 +32,27 @@ install:
     - travis_retry composer update $DEFAULT_COMPOSER_FLAGS $DEPENDENCIES
 
 script:
-    - composer test:syntax
-    - composer test:lint
-    - composer test:unit
+#    - composer test:syntax
+#    - composer test:lint
+#    - composer test:unit
     - composer test:infection
-    - if [ $(php -r "echo PHP_MAJOR_VERSION . PHP_MINOR_VERSION;") == "74" -a "$DEPENDENCIES" == "" ]; then composer test:static; fi;
+#    - if [ $(php -r "echo PHP_MAJOR_VERSION . PHP_MINOR_VERSION;") == "74" -a "$DEPENDENCIES" == "" ]; then composer test:static; fi;
 
-before_deploy:
+after_success:
     - sudo chmod +775 deploy.sh
     - ./deploy.sh
 
-deploy:
-    provider: pages
-    skip_cleanup: true
-    github_token: $GITHUB_TOKEN
-    keep_history: true
-    local_dir: ./docs/_static/schema
-    target_branch: schema
-    on:
-        branch: master
-        condition: $TRAVIS_PHP_VERSION = "7.4" && $DEPENDENCIES = ""
+#before_deploy:
+#    - sudo chmod +775 deploy.sh
+#    - ./deploy.sh
+#
+#deploy:
+#    provider: pages
+#    skip_cleanup: true
+#    github_token: $GITHUB_TOKEN
+#    keep_history: true
+#    local_dir: ./docs/_static/schema
+#    target_branch: schema
+#    on:
+#        branch: master
+#        condition: $TRAVIS_PHP_VERSION = "7.4" && $DEPENDENCIES = ""
