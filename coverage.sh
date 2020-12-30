@@ -67,8 +67,8 @@ vendor/bin/codecept -c source/modules/oe/graphql-base/tests/ run
 # vendor/bin/codecept -c source/modules/oe/graphql-base/tests/ run --coverage --coverage-html
 # vendor/bin/runtests-codeception
 
-echo '---- output of more ----'
-more /home/travis/build/OXID-eSales/shop-graphql/source/modules/oe/graphql-base/tests/Codeception/_output/OxidEsales.GraphQL.Base.Tests.Codeception.Acceptance.GraphQLCest.testOpenShop.fail.html
+# echo '---- output of more ----'
+# more /home/travis/build/OXID-eSales/shop-graphql/source/modules/oe/graphql-base/tests/Codeception/_output/OxidEsales.GraphQL.Base.Tests.Codeception.Acceptance.GraphQLCest.testOpenShop.fail.html
 echo '---- log ----'
-ls
+ls source/log/
 more source/log/oxideshop.log
