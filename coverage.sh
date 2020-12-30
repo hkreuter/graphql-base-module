@@ -71,4 +71,6 @@ vendor/bin/codecept -c source/modules/oe/graphql-base/tests/ run
 # more /home/travis/build/OXID-eSales/shop-graphql/source/modules/oe/graphql-base/tests/Codeception/_output/OxidEsales.GraphQL.Base.Tests.Codeception.Acceptance.GraphQLCest.testOpenShop.fail.html
 echo '---- log ----'
 ls source/log/
+echo '---- size of log ----'
+du -hs source/log/oxideshop.log
 cat source/log/oxideshop.log
