@@ -53,7 +53,7 @@ sudo chmod +775 c3.php
 # Try to run tests and then coverage
 # vendor/bin/codecept -c vendor/oxid-esales/graphql-base/tests/ run
 
-ls source/modules/oe/graphql-base/tests/
+ls source/modules/oe/graphql-base/
 
 
 vendor/bin/codecept -c source/modules/oe/graphql-base/tests/ run --coverage --coverage-html
