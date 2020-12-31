@@ -30,6 +30,8 @@ sed -i "s|'<sShopDir>'|__DIR__|" source/config.inc.php
 sed -i "s|'<sCompileDir>'|__DIR__ . '/tmp'|" source/config.inc.php
 sed -i "s|blSkipViewUsage = false|blSkipViewUsage = true|" source/config.inc.php
 
+sed -i "s|source/modules/oe/graphql-base/tests/codeception.yml|$TRAVIS_BUILD_DIR/source/modules/oe/graphql-base/tests/codeception.yml|" source/modules/oe/graphql-base/tests/codeception.yml
+
 # start mysql and import
 sudo sed -e 's|utf8_unicode_ci|latin1_general_ci|g; s|utf8|latin1|g' --in-place /etc/mysql/my.cnf
 sudo service mysql restart
