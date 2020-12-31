@@ -13,6 +13,9 @@ composer require codeception/module-phpbrowser codeception/c3 --dev
 
 sed -i 's/<?php/<?php\n\nrequire(__DIR__ . "\/..\/c3.php");/' source/bootstrap.php
 
+mkdir source/modules/oe/graphql-base/tests
+cp -r ../graphql-base-module/tests/* source/modules/oe/graphql-base/tests/
+
 cp ./source/config.inc.php.dist ./source/config.inc.php
 chmod 0777 ./source/log
 
@@ -52,8 +55,5 @@ sudo chmod +775 c3.php
 
 # Try to run tests and then coverage
 # vendor/bin/codecept -c vendor/oxid-esales/graphql-base/tests/ run
-
-ls source/modules/oe/graphql-base/
-
 
 vendor/bin/codecept -c source/modules/oe/graphql-base/tests/ run --coverage --coverage-html
