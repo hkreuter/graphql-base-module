@@ -11,7 +11,7 @@ composer require oxid-esales/graphql-base:dev-$TRAVIS_BRANCH
 # For remote code coverage report to work we need to install `c3.php` and require it in the eShops `bootstrap.php` file
 composer require codeception/module-phpbrowser codeception/c3 --dev
 
-#sed -i 's/<?php/<?php\n\nrequire(__DIR__ . "\/..\/c3.php");/' source/bootstrap.php
+sed -i 's/<?php/<?php\n\nrequire(__DIR__ . "\/..\/c3.php");/' source/bootstrap.php
 
 cp ./source/config.inc.php.dist ./source/config.inc.php
 chmod 0777 ./source/log
@@ -46,20 +46,8 @@ composer update
 
 sudo service mysql restart
 
-echo '---------install config---------'
-bin/oe-console oe:module:install-configuration source/modules/oe/graphql-base/
-bin/oe-console oe:module:activate oe_graphql_base
-echo '---------end install config---------'
-
-#sudo chmod +775 c3.php
+sudo chmod +775 c3.php
 
 # Try to run tests and then coverage
-vendor/bin/codecept -c vendor/oxid-esales/graphql-base/tests/ run
-
-# vendor/bin/codecept -c source/modules/oe/graphql-base/tests/ run --coverage --coverage-html
-# vendor/bin/runtests-codeception
-
-cat source/log/oxideshop.log
-
-echo '---- output of more ----'
-more /home/travis/build/OXID-eSales/shop-graphql/source/modules/oe/graphql-base/tests/Codeception/_output/OxidEsales.GraphQL.Base.Tests.Codeception.Acceptance.GraphQLCest.testOpenShop.fail.html
+# vendor/bin/codecept -c vendor/oxid-esales/graphql-base/tests/ run
+vendor/bin/codecept -c source/modules/oe/graphql-base/tests/ run --coverage --coverage-html
