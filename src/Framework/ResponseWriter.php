@@ -12,7 +12,7 @@ namespace OxidEsales\GraphQL\Base\Framework;
 use function header;
 use function json_encode;
 
-class ResponseWriter
+class ResponseWriter implements ResponseWriterInterface
 {
     public function __construct(private readonly TimerHandler $timerHandler)
     {

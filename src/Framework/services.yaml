@@ -1,0 +1,26 @@
+services:
+
+    _defaults:
+        public: false
+        autowire: true
+
+    OxidEsales\GraphQL\Base\Framework\GraphQLQueryHandlerInterface:
+        class: OxidEsales\GraphQL\Base\Framework\GraphQLQueryHandler
+        public: true
+
+    # deprecated
+    OxidEsales\GraphQL\Base\Framework\GraphQLQueryHandler: '@OxidEsales\GraphQL\Base\Framework\GraphQLQueryHandlerInterface'
+
+    OxidEsales\GraphQL\Base\Framework\RequestReaderInterface:
+        class: OxidEsales\GraphQL\Base\Framework\RequestReader
+        public: true
+
+    # deprecated
+    OxidEsales\GraphQL\Base\Framework\RequestReader: '@OxidEsales\GraphQL\Base\Framework\RequestReaderInterface'
+
+    OxidEsales\GraphQL\Base\Framework\ResponseWriterInterface:
+        class: OxidEsales\GraphQL\Base\Framework\ResponseWriter
+        public: true
+
+    # deprecated
+    OxidEsales\GraphQL\Base\Framework\ResponseWriter: '@OxidEsales\GraphQL\Base\Framework\ResponseWriterInterface'

@@ -17,7 +17,7 @@ use GraphQL\GraphQL;
 use Psr\Log\LoggerInterface;
 use Throwable;
 
-class GraphQLQueryHandler
+class GraphQLQueryHandler implements  GraphQLQueryHandlerInterface
 {
     /** @var Error[] */
     private static array $errors = [];
@@ -25,8 +25,8 @@ class GraphQLQueryHandler
     public function __construct(
         private readonly LoggerInterface $logger,
         private readonly SchemaFactory $schemaFactory,
-        private readonly RequestReader $requestReader,
-        private readonly ResponseWriter $responseWriter,
+        private readonly RequestReaderInterface $requestReader,
+        private readonly ResponseWriterInterface $responseWriter,
         private readonly TimerHandler $timerHandler
     ) {
     }

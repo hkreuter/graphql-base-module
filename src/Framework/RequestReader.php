@@ -26,7 +26,7 @@ use function sscanf;
 use function strpos;
 use function trim;
 
-class RequestReader
+class RequestReader implements RequestReaderInterface
 {
     public function __construct(
         private readonly TokenValidator $tokenValidator,
