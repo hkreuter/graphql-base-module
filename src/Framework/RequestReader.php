@@ -171,6 +171,10 @@ class RequestReader implements RequestReaderInterface
             return trim($_SERVER['REDIRECT_HTTP_AUTHORIZATION']);
         }
 
+        if (getenv('GQL_AUTHORIZATION_TOKEN')) {
+            return trim(getenv('GQL_AUTHORIZATION_TOKEN'));
+        }
+
         return null;
     }
 }

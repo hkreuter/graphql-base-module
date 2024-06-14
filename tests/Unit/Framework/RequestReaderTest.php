@@ -11,6 +11,7 @@ namespace OxidEsales\GraphQL\Base\Tests\Unit\Framework;
 
 use GraphQL\Error\InvariantViolation;
 use Lcobucci\JWT\Token;
+use OxidEsales\EshopCommunity\Internal\Container\ContainerFactory;
 use OxidEsales\GraphQL\Base\Exception\InvalidToken;
 use OxidEsales\GraphQL\Base\Framework\RequestReader;
 use OxidEsales\GraphQL\Base\Infrastructure\Legacy;
@@ -96,6 +97,23 @@ class RequestReaderTest extends BaseTestCase
         $token = $requestReader->getAuthToken();
         $this->assertInstanceOf(Token::class, $token);
         unset($_SERVER[$headerName]);
+    }
+
+    public function testGetAuthTokenWithCorrectFormatFromENV(): void
+    {
+        putenv('GQL_AUTHORIZATION_TOKEN=Bearer ' . self::$token);
+
+        $tokenValidator = $this->createPartialMock(TokenValidator::class, ['validateToken']);
+        $tokenValidator->expects($this->once())->method('validateToken');
+
+        $requestReader = new RequestReader(
+            $tokenValidator,
+            $this->getJwtConfigurationBuilder($this->getLegacyMock())
+        );
+
+        $token = $requestReader->getAuthToken();
+        $this->assertInstanceOf(Token::class, $token);
+        putenv('GQL_AUTHORIZATION_TOKEN=');
     }
 
     public function testGetGraphQLRequestDataWithEmptyRequest(): void

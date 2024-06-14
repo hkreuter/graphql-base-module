@@ -1,5 +1,5 @@
 # {{ $ids := "oe_graphql_base" }}ids: {{ $ids }}
-# {{ $org := "oxid-esales" }}organisation: {{ $org }}
+# {{ $org := "hkreuter" }}organisation: {{ $org }}
 # {{ $name := "graphql-base" }}name: {{ $name }}
 # {{ $repo := "OXID-eSales/graphql-base-module" }}repo: {{ $repo }}
 
